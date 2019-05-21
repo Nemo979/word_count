@@ -23,3 +23,6 @@ def count(request):
     sorted_dict = sorted(wordict, key=lambda w:w[1], reverse=True) #'灭': 37 （ 灭是0 ， 37是1）这里是用37来排序
 
     return render(request, "count.html", {'Totalcount': total_count, 'text': user_text, 'worddict': word_dict, 'sort': sorted_dict})
+
+def about(request):
+    return render(request, "about.html")
